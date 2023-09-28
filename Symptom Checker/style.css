@@ -1,0 +1,480 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .Symptoms-container {
+   width: 100%;
+   height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    top: 0;
+   
+    position: absolute;
+    
+  }
+  #close{
+    position: absolute;
+    right: 5%;
+    top: 0%;
+    font-size: 50px;
+    cursor: pointer;
+    color: #0c5f96;
+  }
+  .main-frame{
+    display: flex;
+    height: 55vh;
+  }
+ .main-frame #question-container {
+    
+    padding: 10px;
+    width: 80%;
+    /* display: flex; */
+    position: relative;
+    overflow-y: auto;
+  }
+  .disease-container-inner{
+    
+       background-color: white;
+       border: 1px solid #ccc;
+       border-radius: 10px;
+       margin-top: 0 !important;
+       padding: 20px;
+       margin-top: 10%;
+       width: 60%;
+       height: 70vh;
+       position: relative;
+       box-shadow: 0 0 5px #333
+
+  }
+  .main-frame .options1{
+    border-right: 1px solid #333;
+    width: 30%;
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+  .options1 li{
+    padding-left: 10px;
+    width: 30%;
+    padding: 20px;
+    margin-left: 40px;
+    border-left: 2px solid rgb(141, 145, 145);
+  }
+  #options1{
+    position: absolute;
+    right: 40%;
+  }
+  .btngroup{
+    margin-top: 20px;
+    border-top: 2px solid #959090;
+  
+    padding: 10px;
+    
+  }
+  .btngroup #agreeBtn {
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    padding: 10px 40px;
+    background: rgb(174, 177, 177);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .btngroup #backBtn {
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    padding: 10px 40px;
+    color: rgb(174, 177, 177);;
+    border: 2px solid rgb(174, 177, 177);
+    background-color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .Personal-sec1{
+    display: flex;
+    width: 100%;
+  }
+  .Personal-sec1 .age-sec{
+    width: 70%;
+  }
+  .Personal-sec1 .gender-sec{
+    width: 30%;
+  }
+  #tag-add{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+   
+  }
+  .options{
+    overflow-y: auto;
+    width: 40%;
+    height: 300px;
+    position: absolute;
+    /* background-color: blue; */
+    /* position: sticky;
+    top: 0; */
+  }
+  #searchBar{
+    width: 100%;
+    border: none;
+    font-size: 15px;
+    outline: none;
+    border-bottom: 1px solid #333;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+  }
+  .options-li-new{
+    padding: 5px;
+  }
+  .new-options-li .options-li-new1{
+    padding: 5px;
+    cursor: pointer;
+    list-style: none;
+  }
+  .options-li-new1:hover{
+    background-color: orange;
+  }
+
+  #searchBar2{
+    width: 20%;
+    border: none;
+    font-size: 15px;
+    outline: none;
+    margin: 0 10px;
+    border-bottom: 2px solid #0c5f96;
+    padding: 10px;
+    transition: 0.5s;
+    position: relative;
+  }
+  /* #searchBar2:focus{
+    width: 98%;
+  } */
+ 
+  .options2{
+    display: none;
+    position: absolute;
+    background-color: white;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 99;
+  }
+  .options-li-new:hover{
+    background-color: orange;
+    cursor: pointer;
+    
+  }
+  .closebtn{
+    height: 20px;
+    width: 20px;
+    color: #808080;
+    margin-left: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    right: 3%;
+    top: 20%;
+    padding-top:4px;
+    position: absolute;
+    border-radius: 50%;
+    background: #dfdfdf;
+    justify-content: center;
+    border: none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+   
+  }
+  .tags-all{
+    position: relative;
+    height: 100%;
+  }
+  #resetBtn{
+    position: fixed;
+    bottom: 30%;
+    padding: 10px 40px;
+    color: #0c5f96;;
+    border: 2px solid #0c5f96;
+    background-color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .selected-tag{
+    color: #333;
+    margin: 4px 3px;
+    list-style: none;
+    border-radius: 5px;
+    position: relative;
+    
+  }
+ 
+ .tag-list-ul{
+    margin:0;
+    background-color: #0c5f96;
+    color: #fff;
+    padding: .5rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    padding-right:30px;
+    display: inline-block;
+    list-style:none;
+  }
+  .options-li-new{
+    list-style: none;
+    margin-left: -15px;
+  }
+  .selected-tags{
+    width: 55%;
+    /* background-color: red; */
+    overflow-y: auto;
+    display: flex;
+    /* height: 210px; */
+    flex-wrap: wrap;
+    padding: 7px;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+    /* border: 1px solid #a6a6a6; */
+
+  }
+  
+ .radioButtonDiv{
+    display: flex;
+    justify-content: space-between;
+ }
+ .form-element{
+    display: flex;
+    margin-top: 21px;
+ }
+ .options-li.selected {
+    border-left: 2px solid #0c5f96;
+    color: #0c5f96;
+  }
+  
+  
+  input[type=range] {
+    height: 34px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 60%;
+
+  }
+  
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 20%;
+    height: 18px;
+    cursor: pointer;
+    animate: 0.2s;
+    /* box-shadow: 1px 1px 1px #000000; */
+    background: #c8c9ca;
+    border-radius: 28px;
+    border: 1px solid #010101;
+    
+  }
+  input[type=range]::-webkit-slider-thumb {
+    
+    border: 1px solid #00001E;
+    height: 26px;
+    width: 26px;
+    border-radius: 15px;
+    background: #aeabab;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -4px;
+  }
+  .options-li-new.selected{
+    display: none;
+  }
+  .disease_name_n{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #ccc;
+    position: relative;
+  }
+  
+  .disease-box{
+    border-top:1px solid #0c5f96; 
+    border-bottom:1px solid #0c5f96;
+  }
+  .disease-box h2{
+    /* border-bottom: 2px solid #ccc; */
+    padding: 5px 0 20px 0;
+  }
+  .disease-box h2 a{
+    text-decoration: none;
+  }
+ .disease-names{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+ }
+ .disease-names li{
+  margin: 5px;
+  padding: 5px 30px;
+ }
+ .new-List{
+  border: 1px solid #0c5f96;
+  color: #0c5f96;
+  font-weight: 600;
+  border-radius: 8px;
+ }
+ .quetion-display{
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  padding: 10px 0 10px 0;
+ }
+ .newP{
+  color: #0c5f96;
+ }
+ .gender-n-age{
+  color: #0c5f96;
+ }
+ input[type='radio']{
+  transform: scale(1.5);
+  margin: 5px;
+  background-color: #0c5f96;
+ }
+
+ /*   Home Style Start  */
+    .home-container{
+      width: 100%;
+      height: 100px;
+      border-bottom: 2px solid #0c5f96;
+    }
+   
+    .addBtn{
+      /* position: absolute; */
+      padding: 10px 50px;
+      border: none;
+      background-color: transparent;
+      color: #0c5f96;
+      border: 2px solid #0c5f96;
+      border-radius: 10px;
+      cursor: pointer;
+      
+    }
+    .findBtn{
+      border: 2px solid #0c5f96;
+      background-color: #0c5f96;
+      padding: 10px 50px;
+      color: #fff;
+      border-radius: 10px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    #save{
+      position: absolute;
+      right: 5%;
+      bottom: 5%;
+      padding: 10px 50px;
+      border: none;
+      border-radius: 10px;
+      background-color: #0c5f96;
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      z-index: 999;
+    }
+    #selectDepartment{
+      position: absolute;
+      right: 35%;
+      top: 2%;
+      border: 1px solid #0c5f96;
+      border-radius: 10px;
+      outline: none;
+      padding: 10px 50px;
+      font-size: 15px;
+    }
+  .admin-section-main{
+    display: grid;
+    justify-content: right;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+   
+  }
+  
+    
+#adminForm {
+  display: flex;
+  width: 100%;
+  height: 28px;
+  /* background: red; */
+  justify-content: space-between;
+  }
+  .form-element2{
+    display: flex;
+  }
+  .admin-section{
+    width: 100%;
+    transform: scaleX(0);
+    opacity: 0;
+    transition: 0.5s;
+    overflow-y: auto;
+  
+  }
+  #Edit-question{
+    position: absolute;
+    right: 5%;
+    top:7%;
+    padding: 15px 40px;
+    border: none;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #0c5f96;
+    color: #fff;
+  }
+  .Cncl{
+    cursor: pointer;
+    font-size: 40px;
+    position: absolute;
+    right: 5%;
+    top: -2%;
+  }
+  #unqid{
+    position: absolute;
+    right: 4%;
+    top: 2%;
+    font-size: 15px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #0c5f96;
+  }
+  .spanPer{
+    position: absolute;
+    color: #0c5f96;
+    right: 7%;
+    top: 70%;
+  }
+  .diseaseLink{
+    position: absolute;
+    right: 0%;
+    top: 58%;
+    text-decoration: none;
+    font-size: 24px;
+  }
+
+  /*   Home Style End  */
+ 
+  

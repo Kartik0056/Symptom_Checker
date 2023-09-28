@@ -1,0 +1,4 @@
+$(document).on('click', '.options-li-new1', function() {
+  //   var optionVal = $(this).html();
+  //   $("#searchBar2").val(optionVal);
+  // })

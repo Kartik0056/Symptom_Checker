@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<title>Patient Symptom Checker</title>
+</head>
+<body>
+  
+    <!-- Home Page End -->
+  <section class="Symptoms-container"> 
+  
+<div class="disease-container-inner">
+  <div class="main-frame">
+  <div class="options1">
+    <li class="options-li selected">Welcome</li>
+    <li class="options-li">Patient</li>
+    <li class="options-li" style="display: none;"></li>
+    <li class="options-li">Symptom</li>
+    <li class="options-li">Disease</li>
+  </div>
+  <div id="question-container">
+    <div class="welcome disease-section">
+      <h1>Welcome to the Symptom Checker</h1>
+      <p>Before using this symptom checker, please read carefully and accept our Terms and Services:</p>
+      <ul type="square">
+        <li>This checkup is not a diagnosis.</li>
+        <li>This checkup is for informational purposes and is not a qualified medical opinion.</li>
+        <li>Information that you provide is anonymous and not shared with anyone. We also do not store any information on our server.</li>
+      </ul>
+      <label>
+        <input type="checkbox" id="agreeCheckbox">
+        I agree to the DHILab terms and conditions
+      </label>
+     
+    </div>
+    <div class="Personal-sec disease-section" style="display: none;">
+      <div class="Personal-sec1">
+      <div class="age-sec">
+      <p>What is Your Age ?</p>
+      <div id="question"></div>
+      <h1 id="nextBtn">18</h1>
+      <input type="range" id="symptomRange" min="0" max="100" value="18">
+    </div>
+    <div class="gender-sec">
+      <p>What is Your Gender?</p>
+      <label for="" class="radiobtn">  <input type="radio" name="gender" value="Male" id="male-input"> Male</label><br><label for="" class="radiobtn"><input type="radio" name="gender" value="Female" id="female-input">Female</label>
+    </div>
+  </div>
+      
+    </div>
+  <div id="questionnaire" class="disease-section" style=" display:none;">
+    <div class="heading-div">
+      <h2> Please check all the statement below that applies you</h2>
+      <p> Select one answer in each row </p>
+    </div>
+   
+  </div>
+  <div class="tags-all disease-section" >
+    <div id="tag-add">
+    <div class="options" id="optionsContainer">
+      <input type="search" placeholder="Search Here...." id="searchBar"> 
+      <ul class="options-ul">
+        <!-- List items will be added here dynamically -->
+      </ul>
+    </div>
+
+    <div class="selected-tags" id="tagsContainer">
+      <!-- Tags will be added here -->
+    </div>
+    
+    </div>
+    <button id="resetBtn">Reset</button>
+  </div>
+  <div class="disease-sec disease-section">
+    <div class="details">
+      <div class="gender-n-age"> <h3 id="patient-gender"></h3>
+      <h3 id="patient-age"></h3></div>
+
+    </div>
+    <div id="diseaseContainer">
+      <!-- Disease information will be inserted here -->
+  </div>
+  </div>
+  </div>
+  
+</div>
+  <div class="btngroup">
+    <input type="button" id="backBtn" value="Back" disabled >
+    <input type="button" id="agreeBtn" value="Next" disabled >
+  </div>
+</div>
+</section>
+
+<script src="Department_Doctors.js"></script>
+<script src="Symptoms.js"></script>
+<script src="Diseases.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
